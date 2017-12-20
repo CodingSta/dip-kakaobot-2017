@@ -41,24 +41,29 @@
                 </div>
               </nav>
 
-<h1>AskDjango</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>AskDjango</h1>
 
-<p>
-    안녕하세요. 여러분의 파이썬/장고 페이스메이커가 되겠습니다.
-</p>
-
-<table>
-    {% for post in post_list %}
-        <tr>
-            <td>
-                <a href="/blog/{{ post.pk }}/">
-                    {{ post.title }}
-                </a>
-            </td>
-        </tr>
-    {% endfor %}
-</table>
-
+            <p>
+                안녕하세요. 여러분의 파이썬/장고 페이스메이커가 되겠습니다.
+            </p>
+            
+            <table class="table table-bordered table-hover">
+                {% for post in post_list %}
+                    <tr>
+                        <td>
+                            <a href="/blog/{{ post.pk }}/">
+                                {{ post.title }}
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>                
+        </div>
+    </div>
+</div>
     
 </body>
 </html>
