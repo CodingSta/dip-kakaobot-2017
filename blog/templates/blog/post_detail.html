@@ -1,5 +1,9 @@
-<h1>{{ post.title }}</h1>
+{% extends "blog/layout.html" %}
 
-{{ post.conent|linebreaks }}
-<hr/>
-{{ post.updated_at }}
+{% block content %}
+    <h1>{{ post.title }}</h1>
+
+    {{ post.conent|linebreaks }}
+    <hr/>
+    {{ post.updated_at }}
+{% endblock %}
