@@ -3,6 +3,10 @@
 {% block content %}
     <h1>{{ post.title }}</h1>
 
+    {% if post.photo %}
+        <img src="{{ post.photo.url }}" />
+    {% endif %}
+
     {{ post.conent|linebreaks }}
     <hr/>
     {{ post.updated_at }}

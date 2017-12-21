@@ -5,6 +5,7 @@ class Post(models.Model):
     title = models.CharField(max_length=100)
     conent = models.TextField()
     author = models.CharField(max_length=20)
+    photo = models.ImageField(blank=True)
     status = models.CharField(
         max_length=1,
         choices=[
