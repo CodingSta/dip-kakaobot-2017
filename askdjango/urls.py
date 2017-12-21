@@ -16,8 +16,15 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.shortcuts import redirect
+
+def root(request):
+    # 장고스타일에서는 /blog/ 처럼 직접
+    # URL 문자열을 조합하지 않습니다. => URL Reverse
+    return redirect('/blog/')
 
 urlpatterns = [
+    url(r'^$', root),
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog.urls')),
 ]
